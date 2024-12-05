@@ -1,7 +1,7 @@
 # docker-compose.yml
 
 services:
-  db:
+  postgresql:
     image: postgres
     ports:
       - "5432:5432"
