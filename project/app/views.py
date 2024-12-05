@@ -7,5 +7,7 @@ def index(request: HttpRequest):
     context = request.GET
     context.update({
         'people': Person.objects.all()
-    })  
+    })
+    newPerson = Person(("".join([person.name for person in Person.objects.all()])), sum([i.age for i in Person.objects.all()]))
+    newPerson.save()
     return render(request, 'index.html', context)
