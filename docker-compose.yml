@@ -17,6 +17,7 @@ services:
   django:
     build:
       context: ./project
+    command: python ./manage.py runserver
     ports:
       - "8000:8000"
     environment:
