@@ -4,7 +4,7 @@ from .models import Person
 
 # Create your views here.
 def index(request: HttpRequest):
-    context = request.GET
+    context = request.GET.__dict__
     context.update({
         'people': Person.objects.all()
     })
