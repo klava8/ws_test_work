@@ -7,7 +7,7 @@ services:
 
   django:
     build:
-      context: ./django
+      context: ./project
     ports:
       - "8000:8000"
     environment:
