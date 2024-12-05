@@ -27,6 +27,10 @@ services:
       - POSTGRES_PORT=${POSTGRES_PORT}
     networks:
       - dev
+    volumes:
+      postgres_data:
+
+      
 
   nginx:
     image: nginx
